@@ -3,13 +3,8 @@
 //
 
 const capAndFilter = (arr) => {
-    const newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if ((arr[i].charAt(0) !== 'f') && (arr[i].charAt(0) !== 'F')) {
-      newArr.push(arr[i].toUpperCase());
-    }
-  }
-  return newArr;
+  const newArr = arr.map(string => string.toUpperCase());
+  return newArr.filter(item => item.charAt(0) !== 'F');
 };
 
 module.exports = capAndFilter;
